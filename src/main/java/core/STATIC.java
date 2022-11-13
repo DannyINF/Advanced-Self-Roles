@@ -3,13 +3,6 @@ package core;
 public class STATIC {
 
     /* ==================================
-                   Messages
-    ================================== */
-    public static String gmodOptOut = "";
-    public static String gameRole = "";
-    public static String spoilerOptIn = "";
-
-    /* ==================================
                     Roles
     ================================== */
     // Categories

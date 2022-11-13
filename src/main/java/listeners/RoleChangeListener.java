@@ -37,6 +37,5 @@ public class RoleChangeListener extends ListenerAdapter {
         boolean shouldHaveGmod = RoleManager.hasRoleOfCategory(member.getRoles(), STATIC.CategoryGmod);
         if (!hasGmod && shouldHaveGmod)
             member.getGuild().addRoleToMember(member.getUser(), member.getGuild().getRoleById(STATIC.CategoryGmod)).queue();
-
     }
 }
