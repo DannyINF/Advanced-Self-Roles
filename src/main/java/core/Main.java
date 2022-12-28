@@ -6,7 +6,9 @@ import listeners.RoleChangeListener;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
+import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.interactions.commands.DefaultMemberPermissions;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
@@ -57,7 +59,10 @@ public class Main {
                         .addOptions(new OptionData(STRING, "messagetype", "Welche Nachricht gesendet werden soll.")
                                 .addChoice("Spielerollen", "GameRoles")
                                 .addChoice("GMod", "OptOutGmod")
-                                .addChoice("Spoiler", "OptInSpoiler")))
+                                .addChoice("Spoiler", "OptInSpoiler"))
+                                .setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.ADMINISTRATOR)),
+                        Commands.slash("init", "Initialisiert GMod-Rolle")
+                                .setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.ADMINISTRATOR)))
                 .queue();
     }
 }

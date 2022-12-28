@@ -11,10 +11,9 @@ import java.util.Optional;
 
 public class RoleManager {
 
-    private static Map<String, String> roleToCategory = Map.ofEntries(
+    private static final Map<String, String> roleToCategory = Map.ofEntries(
 
             // Gmod
-            Map.entry(STATIC.CategoryGmod, STATIC.CategoryGmod),
             Map.entry(STATIC.GLeitung, STATIC.CategoryGmod),
             Map.entry(STATIC.GAdmin, STATIC.CategoryGmod),
             Map.entry(STATIC.GSMod, STATIC.CategoryGmod),
@@ -23,6 +22,8 @@ public class RoleManager {
             Map.entry(STATIC.GDev, STATIC.CategoryGmod),
             Map.entry(STATIC.GTeam, STATIC.CategoryGmod),
             Map.entry(STATIC.GEL, STATIC.CategoryGmod),
+            Map.entry(STATIC.GBalancing, STATIC.CategoryGmod),
+            Map.entry(STATIC.GCC, STATIC.CategoryGmod),
 
             // Pings
             Map.entry(STATIC.CategoryPings, STATIC.CategoryPings),
@@ -32,6 +33,7 @@ public class RoleManager {
             Map.entry(STATIC.PLeagueOfLegends, STATIC.CategoryPings),
             Map.entry(STATIC.PAmongUs, STATIC.CategoryPings),
             Map.entry(STATIC.PRainbow, STATIC.CategoryPings),
+            Map.entry(STATIC.CategoryGmod, STATIC.CategoryPings),
 
             // Interests
             Map.entry(STATIC.CategoryInterests, STATIC.CategoryInterests),

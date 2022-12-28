@@ -1,11 +1,16 @@
 package messages;
 
+import core.STATIC;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
+import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.interactions.components.Component;
 import net.dv8tion.jda.api.interactions.components.buttons.Button;
 import net.dv8tion.jda.api.interactions.components.buttons.ButtonStyle;
 import util.PermissionChecker;
+
+import java.awt.*;
 
 public class CommandGenerateMessages {
 
@@ -13,29 +18,40 @@ public class CommandGenerateMessages {
         event.deferReply(true).queue();
         if (!PermissionChecker.checkPermission(new Permission[]{Permission.ADMINISTRATOR}, event.getMember()))
             return;
-        System.out.println(Component.Type.BUTTON.getMaxPerRow());
         switch (messageType) {
             case GameRoles -> {
-                event.getChannel().asGuildMessageChannel().sendMessage("Wähle, welche Spielrollen du willst:")
+                EmbedBuilder builder = new EmbedBuilder();
+                builder.setDescription("Du möchtest benachrichtigt werden, wenn auf diesem Server deine Lieblingsspiele gespielt werden? Dann hol' dir hier die Spielerollen! (Mit einem erneuten Klick auf den Button verlierst du die Rolle wieder.)");
+                builder.setTitle("Pingbare Spielerollen");
+                builder.setColor(Color.ORANGE);
+                event.getChannel().asGuildMessageChannel().sendMessageEmbeds(builder.build())
                         .addActionRow(
-                                Button.of(ButtonStyle.PRIMARY, "pspieleabend", "Spieleabend"),
-                                Button.of(ButtonStyle.PRIMARY, "poverwatch", "Overwatch"),
-                                Button.of(ButtonStyle.PRIMARY, "pcsgo", "CS:GO"),
-                                Button.of(ButtonStyle.PRIMARY, "plol", "League of Legends"),
-                                Button.of(ButtonStyle.PRIMARY, "pamongus", "Among Us")
+                                Button.of(ButtonStyle.PRIMARY, "pspieleabend", "Spieleabend")
                         )
                         .addActionRow(
-                                Button.of(ButtonStyle.PRIMARY, "prainbow", "Rainbow Six Siege")
+                                Button.of(ButtonStyle.PRIMARY, "poverwatch", STATIC.Overwatch),
+                                Button.of(ButtonStyle.PRIMARY, "pcsgo", STATIC.CSGO),
+                                Button.of(ButtonStyle.PRIMARY, "plol", STATIC.LoL),
+                                Button.of(ButtonStyle.PRIMARY, "pamongus", STATIC.AmongUs),
+                                Button.of(ButtonStyle.PRIMARY, "prainbow", STATIC.Rainbow)
                         ).queue();
             }
             case OptOutGmod -> {
-                event.getChannel().asGuildMessageChannel().sendMessage("GMod Benachrichtigungen")
+                EmbedBuilder builder = new EmbedBuilder();
+                builder.setDescription("\"Herr der Ringe\"-RP auf unserem Garry's Mod Server ist nichts für dich? Hier kannst du den gesamten Bereich verstecken! (Mit einem erneuten Klick auf den Button bekommst du die Rolle wieder.)");
+                builder.setTitle("Kein Garry's Mod");
+                builder.setColor(Color.CYAN);
+                event.getChannel().asGuildMessageChannel().sendMessageEmbeds(builder.build())
                         .addActionRow(
                                 Button.primary("garrysmod", "GMod-Zugriff")
                         ).queue();
             }
             case OptInSpoiler -> {
-                event.getChannel().asGuildMessageChannel().sendMessage("Spoilerchannel:")
+                EmbedBuilder builder = new EmbedBuilder();
+                builder.setDescription("Du willst an Diskussionen rund um aktuelle Veröffentlichungen teilnehmen? Dann hol' dir hier den Zugriff! (Mit einem erneuten Klick auf den Button verlierst du die Rolle wieder.)");
+                builder.setTitle("Zugriff Spoilerchannel");
+                builder.setColor(Color.getColor("#8B0000")); // dark red
+                event.getChannel().asGuildMessageChannel().sendMessageEmbeds(builder.build())
                         .addActionRow(
                                 Button.primary("ispoiler", "Spoilerchannel")
                         ).queue();
