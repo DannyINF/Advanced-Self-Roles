@@ -33,6 +33,10 @@ public class RoleManager {
             Map.entry(STATIC.PLeagueOfLegends, STATIC.CategoryPings),
             Map.entry(STATIC.PAmongUs, STATIC.CategoryPings),
             Map.entry(STATIC.PRainbow, STATIC.CategoryPings),
+            Map.entry(STATIC.PCiv6, STATIC.CategoryPings),
+            Map.entry(STATIC.PLOTRO, STATIC.CategoryPings),
+            Map.entry(STATIC.PMinecraft, STATIC.CategoryPings),
+            Map.entry(STATIC.PHearthstone, STATIC.CategoryPings),
             Map.entry(STATIC.CategoryGmod, STATIC.CategoryPings),
 
             // Interests

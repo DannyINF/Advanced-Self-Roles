@@ -60,8 +60,6 @@ public class Main {
                                 .addChoice("Spielerollen", "GameRoles")
                                 .addChoice("GMod", "OptOutGmod")
                                 .addChoice("Spoiler", "OptInSpoiler"))
-                                .setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.ADMINISTRATOR)),
-                        Commands.slash("init", "Initialisiert GMod-Rolle")
                                 .setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.ADMINISTRATOR)))
                 .queue();
     }
