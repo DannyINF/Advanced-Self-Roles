@@ -19,8 +19,10 @@ public class RoleManager {
             Map.entry(STATIC.GSMod, STATIC.CategoryGmod),
             Map.entry(STATIC.GMod, STATIC.CategoryGmod),
             Map.entry(STATIC.GSup, STATIC.CategoryGmod),
+            Map.entry(STATIC.GFAdmin, STATIC.CategoryGmod),
             Map.entry(STATIC.GDev, STATIC.CategoryGmod),
             Map.entry(STATIC.GTeam, STATIC.CategoryGmod),
+            Map.entry(STATIC.GFTeam, STATIC.CategoryGmod),
             Map.entry(STATIC.GEL, STATIC.CategoryGmod),
             Map.entry(STATIC.GBalancing, STATIC.CategoryGmod),
             Map.entry(STATIC.GCC, STATIC.CategoryGmod),
@@ -44,17 +46,6 @@ public class RoleManager {
             Map.entry(STATIC.ISpoiler, STATIC.CategoryInterests)
     );
 
-    public static void manageCategory(Member member, Role role, int add) {
-        Optional<String> categoryId = Optional.of(roleToCategory.get(role.getId()));
-        if (categoryId.isPresent())
-            if (RoleChecker.hasRoles(member, new Role[]{member.getJDA().getRoleById(categoryId.get())})) {
-                if (add < 0)
-                    member.getGuild().removeRoleFromMember(member.getUser(), member.getJDA().getRoleById(categoryId.get())).queue();
-                else if (add > 0)
-                    member.getGuild().addRoleToMember(member.getUser(), member.getJDA().getRoleById(categoryId.get())).queue();
-            }
-    }
-
     public static boolean hasRoleOfCategory(List<Role> roles, String categoryId) {
         List<String> rolesOfCategory = getAllKeysForValue(roleToCategory, categoryId);
         rolesOfCategory.remove(categoryId);
@@ -63,10 +54,6 @@ public class RoleManager {
                 return true;
         }
         return false;
-    }
-
-    public static Optional<String> getCategory(String roleId) {
-        return Optional.of(roleToCategory.get(roleId));
     }
 
     static <K, V> List<K> getAllKeysForValue(Map<K, V> mapOfWords, V value) {

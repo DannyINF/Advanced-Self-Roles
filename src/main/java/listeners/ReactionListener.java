@@ -13,12 +13,11 @@ public class ReactionListener extends ListenerAdapter {
     public void onButtonInteraction(ButtonInteractionEvent event) {
         event.deferEdit().queue();
         List<String> buttonIds = Arrays.asList("garrysmod", "pings", "interests", "gleitung", "gadmin", "gsmod", "gmod",
-                "gsup", "gdev", "gteam", "gel", "gbalance", "gcc", "pspieleabend", "poverwatch", "pcsgo", "plol", "pamongus", "prainbow",
-                "pciv6", "plotro", "pminecraft", "phearthstone",
-                "ispoiler");
+                "gsup", "gfmod", "gdev", "gteam", "gfteam", "gel", "gbalance", "gcc", "pspieleabend", "poverwatch", "pcsgo",
+                "plol", "pamongus", "prainbow", "pciv6", "plotro", "pminecraft", "phearthstone", "ispoiler");
 
         List<String> roleIds = Arrays.asList(STATIC.CategoryGmod, STATIC.CategoryPings, STATIC.CategoryInterests,
-                STATIC.GLeitung, STATIC.GAdmin, STATIC.GSMod, STATIC.GMod, STATIC.GSup, STATIC.GDev, STATIC.GTeam,
+                STATIC.GLeitung, STATIC.GAdmin, STATIC.GSMod, STATIC.GMod, STATIC.GSup, STATIC.GFAdmin, STATIC.GDev, STATIC.GTeam, STATIC.GFTeam,
                 STATIC.GEL, STATIC.GBalancing, STATIC.GCC, STATIC.PSpieleabend, STATIC.POverwatch, STATIC.PCSGO, STATIC.PLeagueOfLegends,
                 STATIC.PAmongUs, STATIC.PRainbow, STATIC.PCiv6, STATIC.PLOTRO, STATIC.PMinecraft, STATIC.PHearthstone, STATIC.ISpoiler);
 

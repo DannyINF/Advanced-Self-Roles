@@ -18,8 +18,10 @@ public class STATIC {
 //    public static String GSMod = "1040664314626973752";
 //    public static String GMod = "1040664314626973751";
 //    public static String GSup = "1040664314626973750";
+//    public static String GFAdmin = "1058697349431558144";
 //    public static String GDev = "1040664314626973749";
 //    public static String GTeam = "1040664314626973748";
+//    public static String GFTeam = "1058697909949976666";
 //    public static String GEL = "1040664314626973747";
 //    public static String GBalancing = "1052929741314859049";
 //    public static String GCC = "1052930269025415198";
@@ -65,8 +67,10 @@ public class STATIC {
     public static String GSMod = "1019291883207393391";
     public static String GMod = "1019291796032983201";
     public static String GSup = "1019291481724428429";
+    public static String GFAdmin = "1058697349431558144";
     public static String GDev = "991765035019939870";
     public static String GTeam = "991763971285721159";
+    public static String GFTeam = "1058697909949976666";
     public static String GEL = "1019339978200854628";
     public static String GBalancing = "1052929741314859049";
     public static String GCC = "1052930269025415198";
