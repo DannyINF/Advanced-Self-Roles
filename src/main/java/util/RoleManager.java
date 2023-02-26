@@ -23,9 +23,11 @@ public class RoleManager {
             Map.entry(STATIC.GDev, STATIC.CategoryGmod),
             Map.entry(STATIC.GTeam, STATIC.CategoryGmod),
             Map.entry(STATIC.GFTeam, STATIC.CategoryGmod),
+            Map.entry(STATIC.GSMTeam, STATIC.CategoryGmod),
             Map.entry(STATIC.GEL, STATIC.CategoryGmod),
-            Map.entry(STATIC.GBalancing, STATIC.CategoryGmod),
+            Map.entry(STATIC.GBewerbung, STATIC.CategoryGmod),
             Map.entry(STATIC.GCC, STATIC.CategoryGmod),
+            Map.entry(STATIC.GSPartner, STATIC.CategoryGmod),
 
             // Pings
             Map.entry(STATIC.CategoryPings, STATIC.CategoryPings),

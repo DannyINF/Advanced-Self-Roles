@@ -71,9 +71,11 @@ public class STATIC {
     public static String GDev = "991765035019939870";
     public static String GTeam = "991763971285721159";
     public static String GFTeam = "1058697909949976666";
+    public static String GSMTeam = "1074440971116367943";
     public static String GEL = "1019339978200854628";
-    public static String GBalancing = "1052929741314859049";
+    public static String GBewerbung = "1063522946880122900";
     public static String GCC = "1052930269025415198";
+    public static String GSPartner = "1076903763903795202";
 
     // Pings
     public static String PSpieleabend = "971104659588644934";
@@ -86,6 +88,8 @@ public class STATIC {
     public static String PMinecraft = "1057990669672648766";
     public static String PCiv6 = "1057990114791411712";
     public static String PHearthstone = "1057989407652712558";
+    public static String PWoT = "1071459635770445887";
+    public static String PBFME = "1079480534843015330";
     // Interests
     public static String ISpoiler = "1022504393649705022";
 
@@ -100,5 +104,7 @@ public class STATIC {
     public static Emoji Minecraft = Emoji.fromCustom("games_minecraft", 1024365310968602734L, false);
     public static Emoji Hearthstone = Emoji.fromCustom("games_hearthstone", 1022503758753697823L, false);
     public static Emoji GarrysMod = Emoji.fromCustom("games_gmod", 1024367276041977873L, false);
+    public static Emoji WorldOfTanks = Emoji.fromCustom("games_wot", 1079482863961002075L, false);
+    public static Emoji BFME = Emoji.fromCustom("games_bfme", 1079482902812840057L, false);
 
 }

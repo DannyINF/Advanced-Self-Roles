@@ -3,9 +3,7 @@ package messages;
 import core.STATIC;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
-import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
-import net.dv8tion.jda.api.interactions.components.Component;
 import net.dv8tion.jda.api.interactions.components.buttons.Button;
 import net.dv8tion.jda.api.interactions.components.buttons.ButtonStyle;
 import util.PermissionChecker;
@@ -33,15 +31,20 @@ public class CommandGenerateMessages {
                                 Button.of(ButtonStyle.PRIMARY, "poverwatch", STATIC.Overwatch),
                                 Button.of(ButtonStyle.PRIMARY, "pcsgo", STATIC.CSGO),
                                 Button.of(ButtonStyle.PRIMARY, "plol", STATIC.LoL),
-                                Button.of(ButtonStyle.PRIMARY, "pamongus", STATIC.AmongUs),
-                                Button.of(ButtonStyle.PRIMARY, "prainbow", STATIC.Rainbow)
+                                Button.of(ButtonStyle.PRIMARY, "pamongus", STATIC.AmongUs)
                         )
                         .addActionRow(
+                                Button.of(ButtonStyle.PRIMARY, "prainbow", STATIC.Rainbow),
                                 Button.of(ButtonStyle.PRIMARY, "pciv6", STATIC.Civ6),
                                 Button.of(ButtonStyle.PRIMARY, "plotro", STATIC.LOTRO),
-                                Button.of(ButtonStyle.PRIMARY, "pminecraft", STATIC.Minecraft),
-                                Button.of(ButtonStyle.PRIMARY, "phearthstone", STATIC.Hearthstone)
-                        ).queue();
+                                Button.of(ButtonStyle.PRIMARY, "pminecraft", STATIC.Minecraft)
+                        )
+                        .addActionRow(
+                                Button.of(ButtonStyle.PRIMARY, "phearthstone", STATIC.Hearthstone),
+                                Button.of(ButtonStyle.PRIMARY, "pwot", STATIC.WorldOfTanks),
+                                Button.of(ButtonStyle.PRIMARY, "pbfme", STATIC.BFME)
+                        )
+                        .queue();
             }
             case OptOutGmod -> {
                 EmbedBuilder builder = new EmbedBuilder();
